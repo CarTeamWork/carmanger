@@ -7,16 +7,6 @@
   <script src="js/bootstrap.min"></script>
   <script src="jquery/jquery-3.0.0.min"></script>
 
-<script>
-
-
-
-</script>
-
-
-<style>
-
-</style>
 <title>
 carmanager
 </title> 
