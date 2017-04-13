@@ -1,0 +1,29 @@
+<?php
+session_start();
+$localhost="localhost";
+$user="";//database user name
+$pass="";//database password
+$db=""; //database name
+
+$connect=; //database connection 
+	
+$username=$_POST['uname'];
+$password=$_POST['password'];
+$sql=""; //database query 
+$query=mysqli_query($connect,$sql);		
+$num= ; //array of users invoked from database 
+		
+		if($num==1){
+			
+			$_SESSION['username']="username"; //يسجل الجلسه //
+			$_SESSION['password']="password";
+			header("Location:http://localhost/carmanager/userpage.php"); //الصفحه اللي هيفتحها //
+			
+			}
+			
+			else {
+				
+				header("Location:http://localhost/carmanager/login1.php");
+				
+				} 
+        ?>
