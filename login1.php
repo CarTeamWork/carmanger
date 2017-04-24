@@ -31,7 +31,7 @@ carmanager
 <h2> <img src="photos/4.png" alt="Mountain View" style="width:500px;height:75px;"> </h2>
 </div>
 </div>
-<FORM role="form" METHOD="POST" ACTION="codes/login.php">
+<FORM role="form" METHOD="POST" ACTION="code/login.php">
 <div class="form-group">
 <p id="add"> our users </p>
 
