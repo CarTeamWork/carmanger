@@ -32,7 +32,7 @@ carmanager
 
 </div>
 </div>
-<FORM role="form" METHOD="POST" ACTION="codes/data back.PHP">
+<FORM role="form" METHOD="POST" ACTION="code/data back.PHP">
 <div class="form-group">
 <p id="add"> our clients</p>
 <label for="text">Your ID </label>
