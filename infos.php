@@ -182,10 +182,11 @@
   <div class="container">
   
     <div id="slides">
-      <img src="photos/4.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" >
-      <img src="photos/5.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/" >
-      <img src="photos/6.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/" >
-      <img src="photos/7.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" >
+      <img src="photos/Previous work0.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" >
+      <img src="photos/Previous work1.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/" >
+      <img src="photos/Previous work2.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/" >
+      <img src="photos/Previous work3.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" >
+      <img src="photos/Previous work4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" >
     </div>
   </div>
   <!-- End SlidesJS Required: Start Slides -->
@@ -214,7 +215,59 @@
     });
   </script>
 
+<FORM role="form" METHOD="POST" ACTION="FILE.PHP" class="form">
+<div class="form-group">
+  <?php
 
+$localhost="localhost";
+$user="root";
+$pass="root1234";
+$db="carmanager";
+
+$connect=mysqli_connect($localhost,$user,$pass,$db);
+	
+
+$sql="SELECT * FROM companydata where id=1 ";
+$query=mysqli_query($connect,$sql);
+while($row = mysqli_fetch_array($query))
+{
+$s1 = $row['cadd'];
+$s2 = $row['cphone'];
+$s3 = $row['cmail'];
+$s4 = $row['cmob'];
+$s5 = $row['cod'];
+
+
+
+		 ?>
+<p id="add"> contact us </p>
+<label for="text">phone num</label>
+<input  type="text" class="form-control" name="firstname" id="1" placeholder="<?php echo $s2; ?>" readonly > 
+ </div>
+ <div class="form-group">
+<label for="text">mob num</label>
+<input  type="text" class="form-control" name="firstname" id="2" placeholder="<?php echo $s4; ?>" readonly> 
+ </div>
+ <div class="form-group">
+<label for="text">@e-mail</label>
+<input  type="text" class="form-control" name="firstname" id="3"placeholder="<?php echo $s3; ?>" readonly> 
+ </div>
+ <div class="form-group">
+<label for="text">address</label>
+<input  type="text" class="form-control" name="firstname" id="4" placeholder="<?php echo $s1; ?>" readonly> 
+ </div>
+ <div class="form-group">
+ <label for="text">other data</label>
+  <textarea class="form-control" rows="4" placeholder="<?php echo $s5; ?>" readonly ></textarea>
+  <?php } ?>
+  
+ </div>
+
+
+
+</form>
+
+</div>
 
 <p>
  <a href="http://www.facebook.com" target="_blank"><img src="photos/1.png" alt="Mountain View" style="width:50px;height:50px;"></a> 
@@ -229,21 +282,24 @@
 
 
 <style>
+.form{
+	display:inline-block;
+	}
 #add{
 
 
 font-size: 1em ;
     margin-top: 10px;
-    margin-right: 250px;
-    margin-left: 240px;
+    margin-right: 150px;
+    margin-left: 140px;
 	margin-bottom : 10px;
-	
+	font-weight:bold;
 	padding-left: 130px ;
 	padding-top : 15px ;
 	padding-bottom : 15px ;
-	padding-right : 0px;
-    background-color : #f59a68 ;
-color : #e5eecc ;
+	padding-right : 130px;
+    background-color:#03F;
+color : #f59a68 ;
 }
 @-webkit-keyframes example {
  0%   {  background-image: url("photos/11.jpg   "  )  ;}
@@ -316,6 +372,24 @@ font-size: 1.5em ;
 
 
 
+
+
+
+
+form  {
+font-size: 1.5em ;
+background-color: #e5eecc; 
+    margin-top: 60px;
+    margin-bottom:20px;
+    margin-right: 200px;
+    margin-left: 200px;
+padding-right : 20px;
+	padding-left: 30px ;
+	padding-top : 20px ;
+	padding-bottom : 20px ;
+	border-radius: 25px ;
+
+}
 a:link {
     color: blue;
 }
